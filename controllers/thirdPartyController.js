@@ -4,7 +4,7 @@ exports.fetchNumbers = async (req, res, next) => {
   const id = req.params.id;
   const { windowSize, storedNumbers } = req.app.locals;
 
-  if (!['p', 'f', 'e', 'r'].includes(id)) {
+  if (!['e'].includes(id)) {
     return res.status(400).json({ error: 'Invalid qualified number ID' });
   }
 
